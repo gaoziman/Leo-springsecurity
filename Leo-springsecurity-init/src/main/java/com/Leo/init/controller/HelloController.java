@@ -1,8 +1,21 @@
-package com.Leo.init.controller;/**
+package com.Leo.init.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
  * @author : Leo
- * @date  2023-10-14 20:58
  * @version 1.0
- * @description :
+ * @date 2023-10-14 20:58
+ * @description : 测试
  */
+@RestController
 public class HelloController {
+
+    @RequestMapping("/hello")
+    public String hello()
+    {
+
+        return "hello";
+    }
 }
