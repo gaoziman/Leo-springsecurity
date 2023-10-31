@@ -18,4 +18,13 @@ public class HelloController {
 
         return "hello";
     }
+
+
+    @RequestMapping("/s")
+    public String success()
+    {
+
+        return "Success";
+    }
+
 }
