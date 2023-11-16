@@ -1,0 +1,10 @@
+server:
+  port: 8500
+
+
+
+spring:
+  security:
+    user:
+      name: javatop
+      password: 123456
