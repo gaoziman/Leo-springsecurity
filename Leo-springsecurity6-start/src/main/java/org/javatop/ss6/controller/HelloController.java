@@ -20,4 +20,10 @@ public class HelloController {
          return "hello......";
     }
 
+
+    @RequestMapping("/test")
+    public String test() {
+
+        return "hello,SpringSecurity6!!!";
+    }
 }
