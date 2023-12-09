@@ -13,6 +13,7 @@
     <modules>
         <module>Leo-springsecurity-init</module>
         <module>Leo-springsecurity-start</module>
+        <module>Leo-springsecurity6-custom</module>
     </modules>
 
     <properties>
