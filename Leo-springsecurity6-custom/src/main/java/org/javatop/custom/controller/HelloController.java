@@ -1,6 +1,5 @@
 package org.javatop.custom.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,5 +15,11 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello() {
         return "Hello World!";
+    }
+
+    @RequestMapping("/test")
+    public String test() {
+
+         return "test 666";
     }
 }
