@@ -13,12 +13,12 @@ import org.springframework.core.env.Environment;
  * @description : 启动类
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
-public class Application
+public class InitApplication
 {
 
     public static void main(String[] args)
     {
-        ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(InitApplication.class, args);
         Environment environment = context.getBean(Environment.class);
 
         System.out.println("访问链接：http://localhost:" + environment.getProperty("server.port"));
