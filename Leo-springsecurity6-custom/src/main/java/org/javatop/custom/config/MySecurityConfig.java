@@ -29,6 +29,10 @@ public class MySecurityConfig {
                 .passwordParameter("password") //
 //                .successForwardUrl("/hello") 访问默认的接口
                 .defaultSuccessUrl("/test") // 依然会访问到原来访问的接口
+
+
+//                .failureForwardUrl("/login.html")//登录失败后的forward跳转
+                .failureUrl("/login.html") //redirect跳转
         ;
         return http.build();
     }

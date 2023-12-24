@@ -47,7 +47,9 @@
   </style>
 </head>
 <body>
+
 <div class="login-container">
+  <h4 style="color: red" th:text="${session.SPRING_SECURITY_LAST_EXCEPTION}"></h4>
   <h2 style="text-align: center">登录页面</h2>
   <form th:action="@{/doLogin}" method="post">
     <div class="form-group">
