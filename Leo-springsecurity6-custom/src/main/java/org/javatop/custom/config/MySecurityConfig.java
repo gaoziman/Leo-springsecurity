@@ -32,8 +32,19 @@ public class MySecurityConfig {
 
 
 //                .failureForwardUrl("/login.html")//登录失败后的forward跳转
-                .failureUrl("/login.html") //redirect跳转
-        ;
+//                .failureUrl("/login.html") //redirect跳转
+
+                .failureHandler(new MyAuthenticationFailureHandler())// 自定义登录失败处理器
+
+                //自定义退出功能
+                .and()
+                .logout() //开启退出功能的定义
+                .logoutUrl("/out")//退出功能的URL
+                .invalidateHttpSession(true) //退出后是否删除session
+                .clearAuthentication(true)//默认为true 清楚当前认证标记
+                .logoutSuccessHandler(new MyLogoutSuccessHandler())
+
+                .and().csrf().disable();
         return http.build();
     }
 }
