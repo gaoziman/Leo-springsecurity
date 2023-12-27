@@ -1,5 +1,8 @@
 package org.javatop.custom.controller;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +17,14 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello() {
+        //获取用户认证信息
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        //登录用户信息
+        System.out.println("认证信息 = " + authentication.getPrincipal());
+        User user = (User) authentication.getPrincipal();
+        System.out.println("用户名 : " + user.getUsername());
+        //权限信息
+        System.out.println("权限信息 : " + authentication.getAuthorities());
         return "Hello World!";
     }
 
