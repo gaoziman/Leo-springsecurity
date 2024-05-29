@@ -12,12 +12,10 @@ import org.springframework.core.env.Environment;
  * @date 2023-10-31 15:05
  * @description : 启动类
  */
-@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
-public class StartApplication
-{
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class StartApplication {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(StartApplication.class, args);
         Environment environment = context.getBean(Environment.class);
 
