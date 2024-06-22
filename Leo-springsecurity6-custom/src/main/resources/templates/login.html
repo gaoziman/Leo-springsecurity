@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xml:th="http://www.thymeleaf.org">
+<html lang="en" xml:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,6 +65,15 @@
     <div class="form-group">
       <input type="submit" value="Log In">
     </div>
+
+    <!--获取登录用户信息-->
+    <ul>
+      <li sec:authentication="principal.username"></li>
+      <li sec:authentication="principal.authorities"></li>
+      <li sec:authentication="principal.accountNonExpired"></li>
+      <li sec:authentication="principal.accountNonLocked"></li>
+      <li sec:authentication="principal.credentialsNonExpired"></li>
+    </ul>
   </form>
 </div>
 </body>

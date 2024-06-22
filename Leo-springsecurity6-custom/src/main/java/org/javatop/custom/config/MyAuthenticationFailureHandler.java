@@ -15,7 +15,7 @@ import java.util.HashMap;
  * @author : Leo
  * @version 1.0
  * @date 2023-12-26 21:20
- * @description : 自定义登录失败处理
+ * @description : 自定义登录失败处理器
  */
 public class MyAuthenticationFailureHandler implements AuthenticationFailureHandler {
     @Override

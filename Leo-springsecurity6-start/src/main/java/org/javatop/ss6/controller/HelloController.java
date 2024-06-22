@@ -1,7 +1,5 @@
 package org.javatop.ss6.controller;
 
-import jakarta.servlet.Filter;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
