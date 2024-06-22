@@ -14,6 +14,7 @@
         <module>Leo-springsecurity-init</module>
         <module>Leo-springsecurity-start</module>
         <module>Leo-springsecurity6-custom</module>
+        <module>Leo-springsecurity6-db</module>
     </modules>
 
     <properties>
