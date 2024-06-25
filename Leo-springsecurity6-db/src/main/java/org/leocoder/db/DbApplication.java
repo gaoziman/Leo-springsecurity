@@ -13,7 +13,7 @@ import org.springframework.core.env.Environment;
  * @description :
  */
 @SpringBootApplication
-@MapperScan("org.leocoder.test.mapper")
+@MapperScan("org.leocoder.db.mapper")
 public class DbApplication {
     public static void main(String[] args) {
             ConfigurableApplicationContext context = SpringApplication.run(DbApplication.class, args);

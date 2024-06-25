@@ -1,5 +1,6 @@
 package org.leocoder.db.service.impl;
 
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.leocoder.db.mapper.SysUserMapper;
@@ -15,4 +16,8 @@ import org.leocoder.db.service.SysUserService;
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService{
 
+    @Override
+    public SysUser loadUserByUsername(String username) {
+        return  null;
+    }
 }

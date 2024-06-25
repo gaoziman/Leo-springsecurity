@@ -4,6 +4,7 @@
     <resultMap id="BaseResultMap" type="org.leocoder.db.domain.SysUser">
         <!--@mbg.generated-->
         <!--@Table sys_user-->
+        <!--@Table sys_role-->
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="username" jdbcType="VARCHAR" property="username"/>
         <result column="password" jdbcType="VARCHAR" property="password"/>
@@ -11,9 +12,16 @@
         <result column="account_non_expired" jdbcType="BOOLEAN" property="accountNonExpired"/>
         <result column="account_non_locked" jdbcType="BOOLEAN" property="accountNonLocked"/>
         <result column="credentials_non_expired" jdbcType="BOOLEAN" property="credentialsNonExpired"/>
+        <!--关系属性-->
+       <collection property="roleList" ofType="SysRole">
+           <id column="rid" property="id"/>
+           <result column="name" property="name" />
+           <result column="describe" property="describe" />
+       </collection>
     </resultMap>
     <sql id="Base_Column_List">
         <!--@mbg.generated-->
+        <!--@Table sys_user-->
         id,
         username,
         `password`,
@@ -22,4 +30,23 @@
         account_non_locked,
         credentials_non_expired
     </sql>
+
+    <select id="selectUserByUsername" resultMap="BaseResultMap">
+        select u.id,
+          u.username,
+          u.password,
+          u.enabled,
+          u.account_non_expired,
+          u.account_non_locked,
+          u.credentials_non_expired,
+          r.id rid,
+          r.name,
+          r.describe
+          from sys_user u
+          left join sysuser_role ur
+          on u.id = ur.uid
+          left join sys_role r
+          on r.id = ur.rid
+          where username = #{username}
+    </select>
 </mapper>
