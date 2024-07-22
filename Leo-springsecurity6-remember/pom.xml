@@ -5,20 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.Leo</groupId>
-        <artifactId>Leo-springsecurity</artifactId>
+        <artifactId>SpringSecurityDemos</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Leo-springsecurity-start</artifactId>
+    <groupId>org.leocoder</groupId>
+    <artifactId>Leo-springsecurity6-remember</artifactId>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -29,10 +35,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
 
-        <!--SpringSecurity启动器-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
     </dependencies>
 </project>
