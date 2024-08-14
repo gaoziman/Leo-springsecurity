@@ -15,6 +15,7 @@
         <module>Leo-springsecurity6-custom</module>
         <module>Leo-springsecurity6-db</module>
         <module>Leo-springsecurity6-remember</module>
+        <module>CustomRememberMe</module>
     </modules>
 
     <properties>
